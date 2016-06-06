@@ -31,8 +31,39 @@ Make sure you have `~/.composer/vendor/bin/ in your path.
 
 ### Start runner
 
-In order to start the PHPCOV-Runner, the only command you need to execut is:
+In order to start the PHPCOVRunner, the only command you need to execute is:
 
 ```
 $ phpcovrunner start
 ```
+
+### Analysing PHP files
+
+In order to allow PHP files getting analysed, you will need to add three lines to the top of the PHP script:
+
+#### When using the global application
+
+```
+$path = $HOME . '/.composer/vendor/legovaer/phpcov-runner/lib";
+set_include_path(get_include_path() . PATH_SEPARATOR . $path);
+require "autocoverage.php";
+```
+
+#### When using the application as a local dependency
+ 
+```
+$path = __DIR__ . '/vendor/legovaer/phpcov-runner/lib";
+set_include_path(get_include_path() . PATH_SEPARATOR . $path);
+require "autocoverage.php";
+```
+
+### Stop runner & generate report
+
+In order to stop the PHPCOVRunner, you will need to execute:
+
+```
+$ phpcovrunner stop
+```
+
+More information about formatting the report can be found on the official page of
+[PHPCOV](https://github.com/sebastianbergmann/phpcov).
