@@ -109,8 +109,10 @@ class XdebugSQLite3 extends Xdebug
     }
 
     /**
-     * @param  array $data
+     * @param array $data
+     *
      * @return array
+     *
      * @since Method available since Release 2.0.0
      */
     private function cleanup(array $data)
@@ -122,7 +124,7 @@ class XdebugSQLite3 extends Xdebug
                 $numLines = $this->getNumberOfLinesInFile($file);
 
                 foreach (array_keys($data[$file]) as $line) {
-                    if (isset($data[$file][$line]) && $line > $numLines) {
+                    if ($line > $numLines) {
                         unset($data[$file][$line]);
                     }
                 }
@@ -133,8 +135,10 @@ class XdebugSQLite3 extends Xdebug
     }
 
     /**
-     * @param  string $file
+     * @param string $file
+     *
      * @return int
+     *
      * @since Method available since Release 2.0.0
      */
     private function getNumberOfLinesInFile($file)
