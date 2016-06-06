@@ -14,7 +14,7 @@
             "email": "legovaer@me.com"
         }
     ],
-    "bin": ["bin/console"],
+    "bin": ["bin/console", "bin/phpcovrunner-php"],
     "config": {
       "bin-dir": "bin/"
     },

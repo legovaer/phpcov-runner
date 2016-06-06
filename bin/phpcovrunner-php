@@ -1,0 +1,42 @@
+#!/usr/bin/env php
+<?php
+$loaded = false;
+
+$autoloaderLocations = [
+  __DIR__ . '/../..',
+  __DIR__ . '/vendor',
+  __DIR__ . '/../vendor',
+  '~/.composer/vendor',
+  getenv('COMPOSER_HOME') . '/vendor',
+];
+
+$autocoverageLocations = [
+  '/legovaer/phpcov-runner/lib/autocoverage.php',
+  '/../lib/autocoverage.php',
+];
+foreach ($autoloaderLocations as $location) {
+    $autoloader = $location.'/autoload.php';
+    if (file_exists($autoloader)) {
+        echo "Found $autoloader\n";
+        require_once $autoloader;
+        $loaded = true;
+                foreach ($autocoverageLocations as $autocoverageLocation) {
+                    $autocoverageFile = $location.$autocoverageLocation;
+                    echo "Looking for $autocoverageFile\n";
+                    if (file_exists($autocoverageFile)) {
+                        echo "Found $autocoverageFile\n";
+                        require_once $autocoverageFile;
+                    }
+                }
+
+        echo "loaded";
+        break;
+    }
+}
+
+$exec = "php ";
+
+for ($i=1; $i<count($argv); $i++) {
+  $exec .= $argv[$i];
+}
+echo shell_exec($exec);

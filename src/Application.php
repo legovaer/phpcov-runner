@@ -16,6 +16,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Legovaer\PHPCOVRunner\Command\StartCommand;
 use Legovaer\PHPCOVRunner\Command\StopCommand;
+use Legovaer\PHPCOVRunner\Command\ExecuteCommand;
 
 /**
  * TextUI frontend for php-code-coverage.
@@ -31,6 +32,7 @@ class Application extends AbstractApplication
 
         $this->add(new StartCommand);
         $this->add(new StopCommand);
+        $this->add(new ExecuteCommand);
     }
 
     /**
