@@ -1,17 +1,13 @@
 <?php
-/**
- * @file
- * Contains
- */
 
 namespace Legovaer\PHPCOVRunner\Command;
 
-use Legovaer\PHPCOVRunner\CodeCoverage;
 use Legovaer\PHPCOVRunner\Driver\XdebugSQLite3;
 use Symfony\Component\Console\Command\Command as AbstractCommand;
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Output\OutputInterface;
 
+/**
+ * Command used for starting a code coverage analysis.
+ */
 class StartCommand extends AbstractCommand
 {
     /**
@@ -24,13 +20,8 @@ class StartCommand extends AbstractCommand
 
     /**
      * Executes the current command.
-     *
-     * @param InputInterface  $input  An InputInterface instance
-     * @param OutputInterface $output An OutputInterface instance
-     *
-     * @return null|int null or 0 if everything went fine, or an error code
-     */
-    protected function execute(InputInterface $input, OutputInterface $output)
+     **/
+    protected function execute()
     {
         $driver = new XdebugSQLite3();
         $driver->resetLog();

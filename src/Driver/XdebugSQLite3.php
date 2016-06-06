@@ -1,14 +1,4 @@
 <?php
-/*
- * This file is part of the PHP_CodeCoverage package.
- *
- * (c) Sebastian Bergmann <sebastian@phpunit.de>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- *
- * @author Levi Govaerts <legovaer@me.com>
- */
 
 namespace Legovaer\PHPCOVRunner\Driver;
 
@@ -19,7 +9,6 @@ use PHP_CodeCoverage_Driver_Xdebug as Xdebug;
 /**
  * Driver for Xdebug's code coverage functionality which saves data to Sqlite3.
  *
- * @since Class available since Release 3.0.1
  * @codeCoverageIgnore
  */
 class XdebugSQLite3 extends Xdebug

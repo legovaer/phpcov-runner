@@ -1,12 +1,4 @@
 <?php
-/*
- * This file is part of phpcov.
- *
- * (c) Sebastian Bergmann <sebastian@phpunit.de>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 
 namespace Legovaer\PHPCOVRunner;
 
@@ -16,12 +8,9 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Legovaer\PHPCOVRunner\Command\StartCommand;
 use Legovaer\PHPCOVRunner\Command\StopCommand;
-use Legovaer\PHPCOVRunner\Command\ExecuteCommand;
 
 /**
- * TextUI frontend for php-code-coverage.
- *
- * @since Class available since Release 2.0.0
+ * Runner application for PHPCOV
  */
 class Application extends AbstractApplication
 {
@@ -32,7 +21,6 @@ class Application extends AbstractApplication
 
         $this->add(new StartCommand);
         $this->add(new StopCommand);
-        $this->add(new ExecuteCommand);
     }
 
     /**

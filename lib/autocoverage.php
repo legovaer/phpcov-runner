@@ -1,5 +1,28 @@
 <?php
 
+$files = [
+  __DIR__ . '/../../autoload.php',
+  __DIR__ . '/vendor/autoload.php',
+  __DIR__ . '/../vendor/autoload.php',
+  __DIR__ . '/../../../autoload.php',
+];
+
+foreach ($files as $file) {
+    if (file_exists($file)) {
+        require $file;
+        $loaded = true;
+        break;
+    }
+}
+
+if (!$loaded) {
+    die(
+      'You need to set up the project dependencies using the following commands:' . PHP_EOL .
+      'wget http://getcomposer.org/composer.phar' . PHP_EOL .
+      'php composer.phar install' . PHP_EOL
+    );
+}
+
 use Legovaer\PHPCOVRunner\Driver\XdebugSQLite3 as Driver;
 use PHP_CodeCoverage as CodeCoverage;
 
