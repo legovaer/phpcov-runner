@@ -1,0 +1,25 @@
+{
+    "name": "legovaer/phpcov-runner",
+    "description": "A tool which allows you to perform a code coverage analysis on multiple PHP files",
+    "type": "project",
+    "require": {
+        "phpunit/phpcov": "2.0.2",
+        "symfony/console": "~2.2",
+        "phpunit/php-code-coverage": "~2.0"
+    },
+    "license": "GNU-2+",
+    "authors": [
+        {
+            "name": "Levi Govaerts",
+            "email": "legovaer@me.com"
+        }
+    ],
+    "bin": ["bin/console"],
+    "config": {
+      "bin-dir": "bin/"
+    },
+    "autoload": {
+      "psr-4": {"Legovaer\\PHPCOVRunner\\": "src"}
+    },
+    "minimum-stability": "dev"
+}
