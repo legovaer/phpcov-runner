@@ -1,9 +1,9 @@
 <?php
 
-namespace Drupal\PHPCOVRunner\Driver;
+namespace Legovaer\PHPCOVRunner\Driver;
 
-use Drupal\PHPCOVRunner\RuntimeException;
-use Drupal\PHPCOVRunner\Handler\Sqlite3Data as DataHandler;
+use Legovaer\PHPCOVRunner\RuntimeException;
+use Legovaer\PHPCOVRunner\Handler\Sqlite3Data as DataHandler;
 use PHP_CodeCoverage_Driver_Xdebug as Xdebug;
 
 /**

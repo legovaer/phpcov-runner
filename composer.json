@@ -1,5 +1,5 @@
 {
-    "name": "drupal/phpcov-runner",
+    "name": "legovaer/phpcov-runner",
     "description": "A tool which allows you to perform a code coverage analysis on multiple PHP files",
     "type": "project",
     "require": {
@@ -19,7 +19,7 @@
       "bin-dir": "bin/"
     },
     "autoload": {
-      "psr-4": {"Drupal\\PHPCOVRunner\\": "src"}
+      "psr-4": {"Legovaer\\PHPCOVRunner\\": "src"}
     },
     "minimum-stability": "dev"
 }

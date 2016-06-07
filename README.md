@@ -7,14 +7,14 @@
 
 ### Composer
 
-Simply add a dependency on `drupal/phpcov-runner` to your project's `composer.json` file if you use
+Simply add a dependency on `legovaer/phpcov-runner` to your project's `composer.json` file if you use
 [Composer](http://getcomposer.org/) to manage the dependencies of your project. Here is a minimal example of a
 `composer.json` file that just defines a development-time dependency on PHPCOV-Runner:
 
 ```
 {
     "require-dev": {
-        "drupal/phpcov-runner": "*"
+        "legovaer/phpcov-runner": "*"
     }
 }
 ```
@@ -22,7 +22,7 @@ Simply add a dependency on `drupal/phpcov-runner` to your project's `composer.js
 For a system-wide installation via Composer, you can run:
 
 ```
-composer global require 'drupal/phpcov-runner=*'
+composer global require 'legovaer/phpcov-runner=*'
 ```
 
 Make sure you have `~/.composer/vendor/bin/ in your path.
@@ -44,7 +44,7 @@ In order to allow PHP files getting analysed, you will need to add three lines t
 #### When using the global application
 
 ```
-$path = $HOME . '/.composer/vendor/drupal/phpcov-runner/lib";
+$path = $HOME . '/.composer/vendor/legovaer/phpcov-runner/lib";
 set_include_path(get_include_path() . PATH_SEPARATOR . $path);
 require "autocoverage.php";
 ```
@@ -52,7 +52,7 @@ require "autocoverage.php";
 #### When using the application as a local dependency
  
 ```
-$path = __DIR__ . '/vendor/drupal/phpcov-runner/lib";
+$path = __DIR__ . '/vendor/legovaer/phpcov-runner/lib";
 set_include_path(get_include_path() . PATH_SEPARATOR . $path);
 require "autocoverage.php";
 ```

@@ -1,13 +1,13 @@
 <?php
 
-namespace Drupal\PHPCOVRunner;
+namespace Legovaer\PHPCOVRunner;
 
 use SebastianBergmann\Version;
 use Symfony\Component\Console\Application as AbstractApplication;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Drupal\PHPCOVRunner\Command\StartCommand;
-use Drupal\PHPCOVRunner\Command\StopCommand;
+use Legovaer\PHPCOVRunner\Command\StartCommand;
+use Legovaer\PHPCOVRunner\Command\StopCommand;
 
 /**
  * Runner application for PHPCOV

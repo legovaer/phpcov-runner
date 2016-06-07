@@ -25,5 +25,5 @@ if (!$loaded) {
     );
 }
 
-$application = new Drupal\PHPCOVRunner\Application;
+$application = new Legovaer\PHPCOVRunner\Application;
 $application->run();
