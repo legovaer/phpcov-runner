@@ -23,7 +23,7 @@ if (!$loaded) {
     );
 }
 
-use Legovaer\PHPCOVRunner\Driver\XdebugSQLite3 as Driver;
+use Drupal\PHPCOVRunner\Driver\XdebugSQLite3 as Driver;
 use PHP_CodeCoverage as CodeCoverage;
 
 if (Driver::isCoverageOn()) {

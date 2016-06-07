@@ -1,6 +1,6 @@
 <?php
 
-namespace Legovaer\PHPCOVRunner;
+namespace Drupal\PHPCOVRunner;
 
 use SebastianBergmann\PHPLOC\Exception;
 

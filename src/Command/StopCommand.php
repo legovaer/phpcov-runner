@@ -1,8 +1,8 @@
 <?php
 
-namespace Legovaer\PHPCOVRunner\Command;
+namespace Drupal\PHPCOVRunner\Command;
 
-use Legovaer\PHPCOVRunner\Driver\XdebugSQLite3;
+use Drupal\PHPCOVRunner\Driver\XdebugSQLite3;
 use SebastianBergmann\PHPCOV\BaseCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;

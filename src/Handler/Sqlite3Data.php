@@ -1,8 +1,8 @@
 <?php
 
-namespace Legovaer\PHPCOVRunner\Handler;
+namespace Drupal\PHPCOVRunner\Handler;
 
-use Legovaer\PHPCOVRunner\RuntimeException;
+use Drupal\PHPCOVRunner\RuntimeException;
 
 /**
  * Data handler for interacting with a Sqlite3 database.
