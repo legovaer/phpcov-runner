@@ -99,8 +99,10 @@ class Sqlite3Data
     {
         $fileNames = array();
         $cursor    = $this->database->query('SELECT DISTINCT name FROM coverage');
-        while ($row = $cursor->fetchArray()) {
-            $fileNames[] = $row[0];
+        if (is_object($cursor)) {
+            while ($row = $cursor->fetchArray()) {
+                $fileNames[] = $row[0];
+            }
         }
 
         return $fileNames;
