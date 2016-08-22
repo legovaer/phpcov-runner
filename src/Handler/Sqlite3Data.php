@@ -123,8 +123,10 @@ class Sqlite3Data
     {
         $coverage = array();
         $result    = $this->database->query("SELECT coverage FROM coverage WHERE name = '$file'");
-        while ($row = $result->fetchArray()) {
-            $this->aggregateCoverage($coverage, unserialize($row[0]));
+        if (is_object($result)) {
+            while ($row = $result->fetchArray()) {
+                $this->aggregateCoverage($coverage, unserialize($row[0]));
+            }
         }
 
         return $coverage;
