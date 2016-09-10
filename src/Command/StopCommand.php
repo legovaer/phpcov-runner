@@ -7,6 +7,7 @@ use SebastianBergmann\PHPCOV\BaseCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Yaml\Yaml;
 
 /**
  * Stop command based on the ExecuteCommand.
@@ -106,5 +107,4 @@ class StopCommand extends BaseCommand
 
         $this->handleReports($coverage, $input, $output);
     }
-
 }
